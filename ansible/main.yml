@@ -1,0 +1,15 @@
+---
+- hosts: foreman
+  vars:
+    foreman_version: 1.11
+  roles:
+    - foreman_repositories
+    - foreman_apache
+    - foreman
+
+- hosts: foreman
+  tasks:
+    - name: 'Install foreman-libvirt'
+      yum:
+        name: foreman-libvirt
+        state: present

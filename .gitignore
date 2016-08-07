@@ -1,0 +1,5 @@
+forklift
+*.swp
+*.swn
+*.swo
+*.retry
